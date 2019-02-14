@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
-    <environment exclude="Development">
+    <environment include="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
@@ -30,9 +30,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
+                    <li><a asp-page="/Volte">Volte</a></li>
                     <li><a asp-page="/Zalgo">Zalgo</a></li>
                     <li><a asp-page="/Emoji">Emoji</a></li>
+                    <li><a asp-page="/DM">Manager</a></li>
+                    <li><a asp-page="/SupportBot">SupportBot</a></li>
                     <li><a href="https://discord.greemdev.net/">Discord</a></li>
                 </ul>
             </div>
