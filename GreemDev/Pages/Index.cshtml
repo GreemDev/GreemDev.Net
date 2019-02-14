@@ -1,96 +1,189 @@
 ﻿@page
-@model IndexModel
+@model GreemDev.Models.FeedbackFormModel
+@using GreemDev.Handlers
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = string.Empty;
+    //var task = Webhook.SendAsync()
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+    <html>
+    <head>
+        <title>Greem</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <noscript>
+            <link rel="stylesheet" href="assets/css/noscript.css" />
+        </noscript>
+    </head>
+    <body class="is-preload">
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core Razor Pages</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?linkid=852130">Working with Razor Pages.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure App Service</a></li>
-        </ul>
-    </div>
-</div>
+        <!-- Page Wrapper -->
+        <div id="page-wrapper">
+
+            <!-- Wrapper -->
+            <div id="wrapper">
+
+                <!-- Panel (Banner) -->
+                <section class="panel banner right">
+                    <div class="content color0 span-3-75">
+                        <h1 class="major">
+                            Hey, my name<br />
+                            is Greem
+                        </h1>
+                        <p>I'm a .NET developer and frequent Destiny player.</p>
+                        <ul class="actions">
+                            <li><a href="#first" class="button primary color1 circle icon fa-angle-right">Next</a></li>
+                        </ul>
+                    </div>
+                    <div class="image filtered span-1-75" data-position="25% 25%">
+                        <img src="images/pic01.jpg" alt="" />
+                    </div>
+                </section>
+
+                <!-- Panel (Spotlight) -->
+                <section class="panel spotlight medium right" id="first">
+                    <div class="content span-8-25">
+                        <h2 class="major">Volte</h2>
+                        <p>
+                            Volte is my primary project. Volte is an <a href="https://github.com/GreemDev/Volte">open-source</a>,
+                            free to use Discord bot
+                            <br />written in C# with <a href="https://github.com/discord-net/Discord.Net">Discord.Net</a>.
+                        </p>
+                    </div>
+                    <div class="image filtered tinted" data-position="top left">
+                        <img src="images/pic02.jpg" alt="" />
+                    </div>
+                </section>
+
+                <!-- Panel (Spotlight) -->
+                <section class="panel spotlight medium left">
+                    <div class="content span-5">
+                        <h2 class="major">Useful Links</h2>
+                        <a href="https://discord.greemdev.net" target="_blank">My Discord Server</a>
+                        <a href="https://dm.greemdev.net" target="_blank">
+                            Discord Manager - A management panel for your Discord
+                            bot.
+                        </a>
+                        <a href="https://zalgo.greemdev.net" target="_blank">Zalgo text generator</a>
+                        <a href="https://emoji.greemdev.net" target="_blank">
+                            Emoji Generator - Convert text to regional indicator
+                            emojis.
+                        </a>
+                        <a href="https://status.greem.me" target="_blank">Statuspage</a>
+
+                    </div>
+                    <div class="image filtered tinted" data-position="top right">
+                        <img src="images/pic03.jpg" alt="" />
+                    </div>
+                </section>
+
+                <!-- Panel -->
+                <section class="panel">
+                    <div class="intro color2">
+                        <h2 class="major">Gallery</h2>
+                        <p>
+                            Gallery of images I've taken or that are based on what I do. Realistic images are either from
+                            Destiny, or taken from <a href="https://www.pinterest.com/egggmeggg/gorgeous/">egggmeggg/gorgeous</a> with permission.
+                        </p>
+                    </div>
+                    <div class="gallery">
+                        <div class="group span-3">
+                            <a href="images/gallery/fulls/01.png" class="image filtered span-3" data-position="bottom">
+                                <img src="images/gallery/fulls/01.png" alt="" />
+                            </a>
+                            <a href="images/gallery/fulls/02.jpg" class="image filtered span-1-5" data-position="center">
+                                <img src="images/gallery/fulls/02.jpg" alt="" />
+                            </a>
+                            <a href="images/gallery/fulls/03.jpg" class="image filtered span-1-5" data-position="bottom">
+                                <img src="images/gallery/fulls/03.jpg" alt="" />
+                            </a>
+                        </div>
+                        <a href="images/gallery/fulls/05.jpg" class="image filtered span-2-5" data-position="top">
+                            <img src="images/gallery/fulls/05.jpg" alt="" />
+                        </a>
+                        <div class="group span-4-5">
+                            <a href="images/gallery/fulls/04.jpg" class="image filtered span-3" data-position="top">
+                                <img src="images/gallery/fulls/04.jpg" alt="" />
+                            </a>
+                            <a href="images/gallery/fulls/06.jpg" class="image filtered span-1-5" data-position="center">
+                                <img src="images/gallery/fulls/06.jpg" alt="" />
+                            </a>
+                            <a href="images/gallery/fulls/07.jpg" class="image filtered span-1-5" data-position="bottom">
+                                <img src="images/gallery/fulls/07.jpg" alt="" />
+                            </a>
+                            <a href="images/gallery/fulls/08.jpg" class="image filtered span-3" data-position="top">
+                                <img src="images/gallery/fulls/08.jpg" alt="" />
+                            </a>
+                        </div>
+                        <a href="images/gallery/fulls/09.jpg" class="image filtered span-2-5" data-position="right">
+                            <img src="images/gallery/fulls/09.jpg" alt="" />
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Panel -->
+                <section class="panel color4-alt">
+                    <div class="intro color4">
+                        <h2 class="major">Want to contact me?</h2>
+                        <p>Fill out the form and hit submit! I check all responses when they come in.</p>
+                    </div>
+                    <div class="inner columns divided">
+                        <!---->
+                        <div class="span-3-25">
+                            <form method="POST">
+                                <div class="fields">
+                                    <div class="field half">
+                                        <label for="name">Name</label>
+                                        <input type="text" name="name" id="name" asp-for="Name"/>
+                                    </div>
+                                    <div class="field half">
+                                        <label for="email">Email</label>
+                                        <input type="email" name="email" id="email" asp-for="Email"/>
+                                    </div>
+                                    <div class="field">
+                                        <label for="message">Message</label>
+                                        <textarea name="message" id="message" rows="4" asp-for="Message"></textarea>
+                                    </div>
+                                </div>
+                                <ul class="actions">
+                                    <li>
+                                        <button id="submitFeedback" type="submit" class="button primary">Send Message</button>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="span-1-5">
+                            <ul class="contact-icons color1">
+                                <li class="icon fa-twitter">
+                                    <a href="https://twitter.com/GreemDev" target="_blank">GreemDev</a>
+                                </li>
+                                <li class="icon fa-instagram">
+                                    <a href="https://instagram.com/greem.exe" target="_blank">greem.exe</a>
+                                </li>
+                                <li class="icon fa-discord">
+                                    <a href="https://greem.me/discord"
+                                       target="_blank">Greem#1337</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Copyright -->
+                <div class="copyright">&copy; Evan Husted. All Rights Reserved.</div>
+
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="assets/js/SendPayload.js"></script>
+    </body>
+    </html>
