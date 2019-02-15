@@ -1,9 +1,13 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace GreemDev.Pages
 {
-    public class Zalgo : PageModel
+    public class ZalgoModel : PageModel
     {
-        public void OnGet() { }
+        public IActionResult OnGet()
+        {
+            return Page();
+        }
     }
 }

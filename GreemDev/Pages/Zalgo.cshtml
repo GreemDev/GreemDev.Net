@@ -1,5 +1,5 @@
 @page
-@model GreemDev.Pages.Zalgo
+@model GreemDev.Pages.ZalgoModel
 
 @{
     ViewData["Title"] = "Zalgo Generator";
@@ -276,7 +276,7 @@
             width="450" height="300">
             <textarea id="zalgo_txt" style="FONT-FAMILY: Times New Roman" rows="13" cols="80"></textarea>
 
-            <form id="zalgo_form" action="">
+            <form id="zalgo_form" method="POST">
                 <a class="waves-effect waves-light btn-small" onclick="zalgo_textarea('zalgo_txt')">Zalgo-ify</a>
                 <a class="waves-effect waves-light btn-small" style="float: right;" onclick="toggle('reference')">Reference</a>
                 <br>
@@ -298,22 +298,20 @@
                                 <input type="checkbox" id="zalgo_opt_down" class="filled-in"/>
                                 <span style="color: black">Down</span>
                             </label>
-
                         </td>
-
                         <td>
                             <label>
-                                <input name="optval" type="radio" id="zalgo_opt_mini" class="filled-in"/>
+                                <input value="" name="optval" type="radio" id="zalgo_opt_mini" class="filled-in"/>
                                 <span style="color: black">Low</span>
                             </label>
                             <br/>
                             <label>
-                                <input name="optval" type="radio" id="zalgo_opt_normal" class="filled-in"/>
+                                <input value="" name="optval" type="radio" id="zalgo_opt_normal" class="filled-in"/>
                                 <span style="color: black">Medium</span>
                             </label>
                             <br/>
                             <label>
-                                <input name="optval" type="radio" id="zalgo_opt_maxi" class="filled-in"/>
+                                <input value="" name="optval" type="radio" id="zalgo_opt_maxi" class="filled-in"/>
                                 <span style="color: black">High</span>
                             </label>
                         </td>

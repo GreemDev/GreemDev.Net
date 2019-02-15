@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using GreemDev.Handlers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace GreemDev.Pages {
-    public class IndexModel : PageModel {
+namespace GreemDev.Pages
+{
+    public class IndexModel : PageModel
+    {
         [BindProperty]
         public string Name { get; set; }
 
@@ -17,8 +16,10 @@ namespace GreemDev.Pages {
         [BindProperty]
         public string Message { get; set; }
 
-        public async Task<IActionResult> OnPostAsync() {
-            if (!ModelState.IsValid) {
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
                 return Page();
             }
 
