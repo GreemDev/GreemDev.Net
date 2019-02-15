@@ -17,7 +17,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <script type="text/javascript" async="" src="ga.js"></script>
     <style type="text/css">
         .zalgo_td {
             BORDER-RIGHT: black 1px solid;
@@ -38,23 +37,6 @@
 
         body { background-color: white; }
     </style>
-    <script type="text/javascript">
-        /* <![CDATA[ */
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-33315451-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
-                '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-        /* ]]> */
-    </script>
 
     <script type="text/javascript">
         //those go UP
@@ -117,7 +99,7 @@
 
         //hide show element
         function toggle(id) {
-            if (document.getElementById(id).style.display == "none")
+            if (document.getElementById(id).style.display === "none")
                 document.getElementById(id).style.display = "block";
             else
                 document.getElementById(id).style.display = "none";
@@ -127,13 +109,13 @@
         function is_zalgo_char(c) {
             var i;
             for (i = 0; i < zalgo_up.length; i++)
-                if (c == zalgo_up[i])
+                if (c === zalgo_up[i])
                     return true;
             for (i = 0; i < zalgo_down.length; i++)
-                if (c == zalgo_down[i])
+                if (c === zalgo_down[i])
                     return true;
             for (i = 0; i < zalgo_mid.length; i++)
-                if (c == zalgo_mid[i])
+                if (c === zalgo_mid[i])
                     return true;
             return false;
         }
@@ -156,10 +138,10 @@
             html += '<br /><b>Chars staying in the middle:</b><br />\n';
             html += '<table class="zalgo_ref_table">\n';
             html += '<tr>\n';
-            for (var i = 0; i < zalgo_mid.length; i++) {
-                if (!(i % 10))
+            for (var o = 0; o < zalgo_mid.length; o++) {
+                if (!(o % 10))
                     html += '</tr><tr>';
-                html += '<td class="zalgo_td">' + zalgo_mid[i] + '</td>\n';
+                html += '<td class="zalgo_td">' + zalgo_mid[o] + '</td>\n';
             }
             html += '</tr>\n';
             html += '</table>\n';
@@ -167,10 +149,10 @@
             html += '<br /><b>Chars going down:</b><br />\n';
             html += '<table class="zalgo_ref_table">\n';
             html += '<tr>\n';
-            for (var i = 0; i < zalgo_down.length; i++) {
-                if (!(i % 10))
+            for (var e = 0; e < zalgo_down.length; e++) {
+                if (!(e % 10))
                     html += '</tr><tr>';
-                html += '<td class="zalgo_td">' + zalgo_down[i] + '</td>\n';
+                html += '<td class="zalgo_td">' + zalgo_down[e] + '</td>\n';
             }
             html += '</tr>\n';
             html += '</table>\n';
@@ -253,8 +235,7 @@
 <div class="section no-pad-bot" id="index-banner">
     <div class="container">
         <br><br>
-        <h2 class="header center purple-text">Zalgo Generator</h2>
-        <h5 class="center black-text">2009 - tchouky || Adapted 2019 - GreemDev</h5>
+        <h3 class="header center purple-text">Zalgo Generator</h3>
         <br><br>
 
     </div>
@@ -277,7 +258,7 @@
             <textarea id="zalgo_txt" style="FONT-FAMILY: Times New Roman" rows="13" cols="80"></textarea>
 
             <form id="zalgo_form" method="POST">
-                <a class="waves-effect waves-light btn-small" onclick="zalgo_textarea('zalgo_txt')">Zalgo-ify</a>
+                <a class="waves-effect waves-light btn-small" onclick="process();">Zalgo-ify</a>
                 <a class="waves-effect waves-light btn-small" style="float: right;" onclick="toggle('reference')">Reference</a>
                 <br>
                 <table>
@@ -290,7 +271,7 @@
                             </label>
                             <br/>
                             <label>
-                                <input type="checkbox" checked="true" id="zalgo_opt_mid" class="filled-in"/>
+                                <input type="checkbox" checked="checked" id="zalgo_opt_mid" class="filled-in"/>
                                 <span style="color: black">Middle</span>
                             </label>
                             <br/>
@@ -306,7 +287,7 @@
                             </label>
                             <br/>
                             <label>
-                                <input value="" name="optval" type="radio" id="zalgo_opt_normal" class="filled-in"/>
+                                <input value="" name="optval" type="radio" id="zalgo_opt_normal" class="filled-in" checked="checked"/>
                                 <span style="color: black">Medium</span>
                             </label>
                             <br/>
@@ -320,7 +301,14 @@
                 </table>
             </form>
             <script type="text/javascript">
-                zalgo_textarea('zalgo_txt');
+                function process() {
+                    if (document.getElementById("zalgo_txt").value === "") {
+                        M.toast({ html: "You didn't enter any text to Zalgo-ify!" });
+                    } else {
+                        zalgo_textarea('zalgo_txt');
+                    }
+                }
+
             </script>
 
         </td>
