@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace GreemDev.Pages
 {
-    public class ZalgoModel : PageModel
+    public class Zalgo : PageModel
     {
         public IActionResult OnGet()
         {

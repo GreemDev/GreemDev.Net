@@ -12,10 +12,12 @@
 <html>
 <head>
     <title>Volte</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="volte/assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="volte/assets/css/noscript.css" /></noscript>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="volte/assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="volte/assets/css/noscript.css"/>
+    </noscript>
     <link rel="icon" href="volte/images/logo.png" type="image/x-icon">
 </head>
 <body class="is-preload">
@@ -34,10 +36,18 @@
         </div>
         <nav>
             <ul>
-                <li><a href="https://github.com/GreemDev/Volte" target="_blank">GitHub</a></li>
-                <li><a href="https://github.com/GreemDev/Volte/wiki" target="_blank">Docs</a></li>
-                <li><a href="https://discord.greemdev.net" target="_blank">Discord</a></li>
-                <li><a href="https://discordapp.com/oauth2/authorize?client_id=320942091049893888&scope=bot&permissions=8" target="_blank">Invite</a></li>
+                <li>
+                    <a href="https://github.com/GreemDev/Volte" target="_blank">GitHub</a>
+                </li>
+                <li>
+                    <a href="https://github.com/GreemDev/Volte/wiki" target="_blank">Docs</a>
+                </li>
+                <li>
+                    <a asp-page="/Discord" target="_blank">Discord</a>
+                </li>
+                <li>
+                    <a asp-page="/Invite" target="_blank">Invite</a>
+                </li>
             </ul>
         </nav>
     </header>
