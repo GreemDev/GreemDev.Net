@@ -1,4 +1,8 @@
 // Make a HTML array to store all the relevant HTML elements.
+import * as M from "./materialize";
+import * as Discord from "./discord/discord.11.0.0";
+import * as Mustache from "./mustache";
+
 const html = [];
 
 // Find the following IDs in the document
@@ -124,7 +128,7 @@ const removeGuild = (bot, guildid) => { // eslint-disable-line no-unused-vars
 	.then((g) => {
 			renderBotStats(bot);
 			renderGuildsStats(bot);
-			Materialize.toast(`Left ${g.name}`, 4000);
+		M.toast(`Left ${g.name}`, 4000);
 		}).catch(console.error);
 };
 const removeModal = (bot, minimum, percentage) => { // eslint-disable-line no-unused-vars
@@ -153,7 +157,7 @@ const removeModal = (bot, minimum, percentage) => { // eslint-disable-line no-un
 		`, info);
 		$('#modal').modal('open');
 	} else {
-		Materialize.toast('No guilds fit the criteria.', 4000);
+		M.toast('No guilds fit the criteria.', 4000);
 	}
 };
 const messageModal = (bot, guildid) => { // eslint-disable-line no-unused-vars
@@ -246,23 +250,23 @@ const messageGuild = (bot, guildid, where, text) => { // eslint-disable-line no-
 	const guild = bot.guilds.get(guildid);
 
 	if (where === 'none') {
-		Materialize.toast('Please select a guild', 4000);
+		M.toast('Please select a guild', 4000);
 	} else if (!guild) {
-		Materialize.toast('This guild does not exist.', 4000);
+		M.toast('This guild does not exist.', 4000);
 		$('#modal').modal('close');
 	} else if (where === 'owner') {
 		if (guild.owner) {
 			guild.owner.createDM().then((dm) => {
 				dm.send(text)
 					.then(() => {
-						Materialize.toast('Sent message to owner', 4000);
+						M.toast('Sent message to owner', 4000);
 					})
 					.catch((err) => {
-						Materialize.toast(`Error in sending message: ${err.message}`, 4000);
+						M.toast(`Error in sending message: ${err.message}`, 4000);
 					});
 			});
 		} else {
-			Materialize.toast('This guild doesn\'t have an owner', 4000);
+			M.toast('This guild doesn\'t have an owner', 4000);
 		}
 		$('#modal').modal('close');
 	} else {
@@ -276,30 +280,30 @@ const messageGuild = (bot, guildid, where, text) => { // eslint-disable-line no-
 		if (channel) {
 			channel.send(text)
 				.catch((err) => {
-					Materialize.toast(err.message, 4000);
+					M.toast(err.message, 4000);
 				});
 		} else {
-			Materialize.toast('This guild doesn\'t have this channel', 4000);
+			M.toast('This guild doesn\'t have this channel', 4000);
 		}
 		$('#modal').modal('close');
 	}
 };
 const changeUsername = (bot, text) => { // eslint-disable-line no-unused-vars
 	if (!text) {
-		Materialize.toast('Did not change username', 4000);
+		M.toast('Did not change username', 4000);
 	} else {
 		bot.user.setUsername(text)
 			.then((user) => {
-				Materialize.toast(`Changed username to ${user.username}`, 4000);
+				M.toast(`Changed username to ${user.username}`, 4000);
 			})
 			.catch((err) => {
-				Materialize.toast(`Error in changing username: ${err.message}`, 4000);
+				M.toast(`Error in changing username: ${err.message}`, 4000);
 			});
 	}
 };
 const changeAvatar = (bot, file) => { // eslint-disable-line no-unused-vars
 	if (!file) {
-		Materialize.toast('Did not change profile', 4000);
+		M.toast('Did not change profile', 4000);
 	} else {
 		const reader = new FileReader();
 		reader.readAsDataURL(file);
@@ -309,10 +313,10 @@ const changeAvatar = (bot, file) => { // eslint-disable-line no-unused-vars
 
 			bot.user.setAvatar(reader.result)
 				.then(() => {
-					Materialize.toast('Changed avatar', 4000);
+					M.toast('Changed avatar', 4000);
 				})
 				.catch((err) => {
-					Materialize.toast(`Error in changing avatar: ${err.message}`, 4000);
+					M.toast(`Error in changing avatar: ${err.message}`, 4000);
 				});
 		}, false);
 	}
@@ -334,7 +338,7 @@ client.login(get('token'))
 
 // Wait until the client is ready
 client.on('ready', () => {
-	Materialize.toast('Successfully connected to Discord!', 4000);
+	M.toast('Successfully connected to Discord!', 4000);
 	renderBotStats(client);
 	renderGuildsStats(client);
 	setInterval(() => {
