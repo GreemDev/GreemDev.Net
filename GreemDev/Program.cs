@@ -33,6 +33,8 @@ namespace GreemDev
             finally
             {
                 Log.CloseAndFlush();
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
             }
         }
 
