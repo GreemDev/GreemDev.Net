@@ -1,146 +1,117 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "GreemDev";
-    Layout = "_Layout";
 }
 
+<!DOCTYPE HTML>
 <html>
 <head>
-    <title>Greem</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="assets/css/main.css"/>
-    <link rel="shortcut icon" href="favicon.ico">
-    <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css"/>
-    </noscript>
+    <title>GreemDev</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
 
-<!-- Page Wrapper -->
-<div id="page-wrapper">
+    <!-- Sidebar -->
+    <section id="sidebar">
+        <div class="inner">
+            <nav>
+                <ul>
+                    <li><a href="#intro">Welcome</a></li>
+                    <li><a href="#one">What I Do</a></li>
+                    <li><a href="#three">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
 
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Panel (Banner) -->
-        <section class="panel banner right">
-            <div class="content color0 span-3-75">
-                <h1 class="major">
-                    Hey, my name<br/>
-                    is Greem
-                </h1>
-                <p>I'm a .NET developer and frequent Destiny player.</p>
+        <!-- Intro -->
+        <section id="intro" class="wrapper style1 fullscreen fade-up">
+            <div class="inner">
+                <h1>GreemDev</h1>
+                <p>Just a junior .NET/JVM Developer, and Destiny player, <br /> with too much time on my hands.</p>
                 <ul class="actions">
-                    <li>
-                        <a href="#first" class="button primary color1 circle icon fa-angle-right">Next</a>
-                    </li>
+                    <li><a href="#one" class="button scrolly">More Info</a></li>
                 </ul>
             </div>
-            <div class="image filtered span-1-75" data-position="25% 25%">
-                <img src="images/pic01.jpg" alt=""/>
-            </div>
         </section>
 
-        <!-- Panel (Spotlight) -->
-        <section class="panel spotlight medium right" id="first">
-            <div class="content span-8-25">
-                <h2 class="major">Volte</h2>
-                <p>
-                    Volte is my primary project. Volte is an <a href="https://github.com/GreemDev/Volte">open-source</a>,
-                    free to use Discord bot
-                    <br/>written in C# with <a href="https://github.com/discord-net/Discord.Net">Discord.Net</a>.
-                    You can either <a asp-page="/Invite">invite</a> the bot to your server,
-                    <br/>or you can <a href="https://github.com/GreemDev/Volte/wiki/">learn how to host it yourself</a>.
-                </p>
-            </div>
-            <div class="image filtered tinted" data-position="top left">
-                <img src="images/pic02.jpg" alt=""/>
-            </div>
-        </section>
-
-        <!-- Panel -->
-        <section class="panel">
-            <div class="intro color2">
-                <h2 class="major">Gallery</h2>
-                <p>
-                    Gallery of images I've taken or that are based on what I do. Realistic images are either from
-                    Destiny, or taken from <a href="https://www.pinterest.com/egggmeggg/gorgeous/">egggmeggg/gorgeous</a> with permission.
-                </p>
-            </div>
-            <div class="gallery">
-                <div class="group span-3">
-                    <a href="images/gallery/fulls/01.png" class="image filtered span-3" data-position="bottom">
-                        <img src="images/gallery/fulls/01.png" alt=""/>
-                    </a>
-                    <a href="images/gallery/fulls/02.jpg" class="image filtered span-1-5" data-position="center">
-                        <img src="images/gallery/fulls/02.jpg" alt=""/>
-                    </a>
-                    <a href="images/gallery/fulls/03.jpg" class="image filtered span-1-5" data-position="bottom">
-                        <img src="images/gallery/fulls/03.jpg" alt=""/>
-                    </a>
+        <!-- One -->
+        <section id="one" class="wrapper style2 spotlights">
+            <section>
+                <a href="https://github.com/GreemDev/Volte" class="image"><img src="images/Volte.png" alt="" data-position="center center" /></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Volte</h2>
+                        <p>A free, robust, open-source Discord bot written in C# with <a href="https://github.com/discord-net/Discord.net">Discord.Net</a>.</p>
+                        <ul class="actions">
+                            <li><a asp-page="/Volte" class="button">Learn more</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <a href="images/gallery/fulls/05.jpg" class="image filtered span-2-5" data-position="top">
-                    <img src="images/gallery/fulls/05.jpg" alt=""/>
-                </a>
-                <div class="group span-4-5">
-                    <a href="images/gallery/fulls/04.jpg" class="image filtered span-3" data-position="top">
-                        <img src="images/gallery/fulls/04.jpg" alt=""/>
-                    </a>
-                    <a href="images/gallery/fulls/06.jpg" class="image filtered span-1-5" data-position="center">
-                        <img src="images/gallery/fulls/06.jpg" alt=""/>
-                    </a>
-                    <a href="images/gallery/fulls/07.jpg" class="image filtered span-1-5" data-position="bottom">
-                        <img src="images/gallery/fulls/07.jpg" alt=""/>
-                    </a>
-                    <a href="images/gallery/fulls/08.jpg" class="image filtered span-3" data-position="top">
-                        <img src="images/gallery/fulls/08.jpg" alt=""/>
-                    </a>
+            </section>
+            <section>
+                <a href="#" class="image"><img src="images/Titan.png" alt="" data-position="top center" /></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Professional Titan Main</h2>
+                        <p>As seen above, I play Destiny a lot. As a result, I have a main class; that class being Titan. I ain't about that Hunter or Warlock life.</p>
+                    </div>
                 </div>
-                <a href="images/gallery/fulls/09.jpg" class="image filtered span-2-5" data-position="right">
-                    <img src="images/gallery/fulls/09.jpg" alt=""/>
-                </a>
-            </div>
+            </section>
         </section>
 
-        <!-- Panel -->
-        <section class="panel color4-alt">
-            <div class="inner columns divided">
-                <!---->
-                <div class="span-3-25"></div>
-                <div class="span-1-5">
-                    <ul class="contact-icons color1">
-                        <li class="icon fa-twitter">
-                            <a href="https://twitter.com/GreemDev" target="_blank">GreemDev</a>
-                        </li>
-                        <li class="icon fa-instagram">
-                            <a href="https://instagram.com/greemdev" target="_blank">greemdev</a>
-                        </li>
-                        <li class="icon fa-discord">
-                            <a href="https://greemdev.net/Discord"
-                               target="_blank">
-                                Greem#1337
-                            </a>
-                        </li>
-                    </ul>
+        <!-- Two -->
+        <section id="three" class="wrapper style1 fade-up">
+            <div class="inner">
+                <h2>Contact</h2>
+                <p>You may use the following services to contact me. (Discord too, of course)</p>
+                <div class="split style1">
+                    <section>
+                        <ul class="contact">
+                            <li>
+                                <h3>Email</h3>
+                                <a href="mailto:evan.husted@greem.me">evan.husted@greem.me</a>
+                            </li>
+                            <li>
+                                <h3>Social</h3>
+                                <ul class="icons">
+                                    <li><a href="https://twitter.com/GreemDev" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                    <li><a href="https://github.com/GreemDev" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                                    <li><a href="https://instagram.com/greemdev" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
                 </div>
             </div>
         </section>
-
-        <!-- Copyright -->
-        <div class="copyright">&copy; Evan Husted. All Rights Reserved.</div>
 
     </div>
 
-</div>
+    <!-- Footer -->
+    <footer id="footer" class="wrapper style1-alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Evan Husted. All rights reserved.</li>
+                <li>Thanks HTML5UP for this</li>
+            </ul>
+        </div>
+    </footer>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="assets/js/SendPayload.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html>

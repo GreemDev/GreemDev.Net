@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using GreemDev.Handlers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -16,14 +15,8 @@ namespace GreemDev.Pages
         [BindProperty]
         public string Message { get; set; }
 
-        public async Task<IActionResult> OnPostAsync()
+        public IActionResult OnGet()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            await Webhook.SendAsync(Name, Email, Message);
             return Page();
         }
     }
