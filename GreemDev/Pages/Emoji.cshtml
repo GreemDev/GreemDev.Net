@@ -1,4 +1,4 @@
-@page
+﻿@page
 @model GreemDev.Pages.Emoji
 
 @{
@@ -29,7 +29,7 @@
         return /^[A-Z]$/i.test(ch);
     }
     var returnNum = function(ch) {
-        var num = [
+        const num = [
             ':zero: ', ':one: ', ':two: ', ':three: ', ':four: ', ':five: ', ':six: ', ':seven: ', ':eight: ',
             ':nine: '
         ];
@@ -38,9 +38,9 @@
 
     function convert() {
         document.getElementById("output").value = ''; //
-        var input = document.getElementById("input").value;
+        const input = document.getElementById("input").value;
         var output = '';
-        for (var i = 0; i < input.length; i++) { //for letter in input text
+        for (let i = 0; i < input.length; i++) { //for letter in input text
             if (isAlpha(input.charAt(i))) { //alphabet
                 output = output + ':regional_indicator_' + input.charAt(i).toLowerCase() + ': ';
             } else {
@@ -56,7 +56,7 @@
                 }
             }
         }
-        output = output.replace(' ', '  '); //공백 중복하여 확연히 구별
+        output = output.replace(' ', '  ');
         document.getElementById("output").value = output;
     }
 

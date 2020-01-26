@@ -21,20 +21,17 @@ namespace GreemDev.Files
             if (File.Exists(ConfigFile) && !string.IsNullOrEmpty(File.ReadAllText(ConfigFile))) return;
             _site = new SiteConfig
             {
-                WebhookToken = string.Empty,
-                WebhookId = ulong.MinValue
+                WriteRequestInfoToConsole = true
             };
             File.WriteAllText(ConfigFile,
                 JsonConvert.SerializeObject(_site, Formatting.Indented));
         }
 
-        public static string GetWebhookToken() => _site.WebhookToken;
-        public static ulong GetWebhookId() => _site.WebhookId;
+        public static bool ShouldWriteRequestInfoToConsole() => _site.WriteRequestInfoToConsole;
 
         private struct SiteConfig
         {
-            public string WebhookToken;
-            public ulong WebhookId;
+            internal bool WriteRequestInfoToConsole;
         }
     }
 }
