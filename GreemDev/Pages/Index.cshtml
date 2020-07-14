@@ -7,111 +7,139 @@
 <html>
 <head>
     <title>GreemDev</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
 </head>
 <body class="is-preload">
 
-    <!-- Sidebar -->
-    <section id="sidebar">
+<!-- Sidebar -->
+<section id="sidebar">
+    <div class="inner">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#welcome">Welcome</a>
+                </li>
+                <li>
+                    <a href="#whatido">What I Do</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Intro -->
+    <section id="welcome" class="wrapper style1 fullscreen fade-up">
         <div class="inner">
-            <nav>
-                <ul>
-                    <li><a href="#welcome">Welcome</a></li>
-                    <li><a href="#whatido">What I Do</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <h1>GreemDev</h1>
+            <p>Just a junior .NET/JVM Developer, and Destiny player, <br/> with too much time on my hands.</p>
+            <ul class="actions">
+                <li>
+                    <a href="#whatido" class="button scrolly">More Info</a>
+                </li>
+            </ul>
         </div>
     </section>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Intro -->
-        <section id="welcome" class="wrapper style1 fullscreen fade-up">
-            <div class="inner">
-                <h1>GreemDev</h1>
-                <p>Just a junior .NET/JVM Developer, and Destiny player, <br /> with too much time on my hands.</p>
-                <ul class="actions">
-                    <li><a href="#whatido" class="button scrolly">More Info</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- One -->
-        <section id="whatido" class="wrapper style2 spotlights">
-            <section>
-                <a href="https://github.com/GreemDev/Volte" class="image"><img src="images/Volte.png" alt="" data-position="center center" /></a>
-                <div class="content">
-                    <div class="inner">
-                        <h2>Volte</h2>
-                        <p>A free, robust, open-source Discord bot written in C# with <a href="https://github.com/discord-net/Discord.net">Discord.Net</a>.</p>
-                        <ul class="actions">
-                            <li><a asp-page="/Volte" class="button">Learn more</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <a href="#" class="image"><img src="images/Warlock.jpg" alt="" data-position="top center" /></a>
-                <div class="content">
-                    <div class="inner">
-                        <h2>Professional Warlock Main</h2>
-                        <p>As seen above, I play Destiny a lot. As a result, I have a main class; that class being Warlock. I used to main Titan but most of the subclasses aren't interesting and Titan Skating doesn't really exist anymore.</p>
-                    </div>
-                </div>
-            </section>
-        </section>
-
-        <!-- Two -->
-        <section id="contact" class="wrapper style1 fade-up">
-            <div class="inner">
-                <h2>Contact</h2>
-                <p>You may use the following services to contact me. (Discord too, of course)</p>
-                <div class="split style1">
-                    <section>
-                        <ul class="contact">
-                            <li>
-                                <h3>Email</h3>
-                                <a href="mailto:greem@greemdev.net">greem@greemdev.net</a>
-                            </li>
-                            <li>
-                                <h3>Social</h3>
-                                <ul class="icons">
-                                    <li><a href="https://twitter.com/GreemDev" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                                    <li><a href="https://github.com/GreemDev" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                                    <li><a href="https://instagram.com/greemdev" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </section>
+    <!-- One -->
+    <section id="whatido" class="wrapper style2 spotlights">
+        <section>
+            <a href="https://github.com/GreemDev/Volte" class="image">
+                <img src="images/Volte.png" alt="" data-position="center center"/>
+            </a>
+            <div class="content">
+                <div class="inner">
+                    <h2>Volte</h2>
+                    <p>A free, robust, open-source Discord bot written in C# with <a href="https://github.com/discord-net/Discord.net">Discord.Net</a>.</p>
+                    <ul class="actions">
+                        <li>
+                            <a asp-page="/Volte" class="button">Learn more</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
+        <section>
+            <a href="#" class="image">
+                <img src="images/Warlock.jpg" alt="" data-position="top center"/>
+            </a>
+            <div class="content">
+                <div class="inner">
+                    <h2>Professional Warlock Main</h2>
+                    <p>As seen above, I play Destiny a lot. As a result, I have a main class; that class being Warlock. I used to main Titan but most of the subclasses aren't interesting and Titan Skating doesn't really exist anymore.</p>
+                </div>
+            </div>
+        </section>
+    </section>
 
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="wrapper style1-alt">
+    <!-- Two -->
+    <section id="contact" class="wrapper style1 fade-up">
         <div class="inner">
-            <ul class="menu">
-                <li>&copy; Evan Husted. All rights reserved.</li>
-                <li>Thanks HTML5UP for this</li>
-            </ul>
+            <h2>Contact</h2>
+            <p>You may use the following services to contact me. (Discord too, of course)</p>
+            <div class="split style1">
+                <section>
+                    <ul class="contact">
+                        <li>
+                            <h3>Email</h3>
+                            <a href="mailto:hello@greemdev.net">hello@greemdev.net</a>
+                        </li>
+                        <li>
+                            <h3>Social</h3>
+                            <ul class="icons">
+                                <li>
+                                    <a href="https://twitter.com/GreemDev" class="icon brands fa-twitter">
+                                        <span class="label">Twitter</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/GreemDev" class="icon brands fa-github">
+                                        <span class="label">GitHub</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/greemdev" class="icon brands fa-instagram">
+                                        <span class="label">Instagram</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+</div>
+
+<!-- Footer -->
+<footer id="footer" class="wrapper style1-alt">
+    <div class="inner">
+        <ul class="menu">
+            <li>&copy; Evan Husted. All rights reserved.</li>
+            <li>Thanks HTML5UP for this</li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>

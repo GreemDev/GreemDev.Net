@@ -6,60 +6,97 @@
     ViewData["Title"] = "Volte";
 }
 
-<!DOCTYPE html>
-
 <!DOCTYPE HTML>
 <html>
 <head>
     <title>Volte</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="volte/assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
     <noscript>
-        <link rel="stylesheet" href="volte/assets/css/noscript.css"/>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
-    <link rel="icon" href="volte/images/logo.png" type="image/x-icon">
 </head>
 <body class="is-preload">
 
+<!-- Wrapper -->
 <div id="wrapper">
 
-    <header id="header">
-        <div class="logo">
-            <img src="volte/images/logo.png" width="85"/>
-        </div>
-        <div class="content">
-            <div class="inner">
-                <h1>Volte</h1>
-                <p>A free, robust, open-source Discord bot written in C#.</p>
+    <!-- Main -->
+    <section id="main">
+        <header>
+            <span class="avatar">
+                <img src="" alt=""/>
+            </span>
+            <h1><br/><br/>Volte</h1>
+            <p style="color: black">A free, open-source Discord bot written in C#.</p>
+        </header>
+        <!--
+        <hr />
+        <h2>Extra Stuff!</h2>
+        <form method="post" action="#">
+            <div class="fields">
+                <div class="field">
+                    <input type="text" name="name" id="name" placeholder="Name" />
+                </div>
+                <div class="field">
+                    <input type="email" name="email" id="email" placeholder="Email" />
+                </div>
+                <div class="field">
+                    <select name="department" id="department">
+                        <option value="">Department</option>
+                        <option value="sales">Sales</option>
+                        <option value="tech">Tech Support</option>
+                        <option value="null">/dev/null</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
+                </div>
+                <div class="field">
+                    <input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
+                </div>
+                <div class="field">
+                    <label>But are you a robot?</label>
+                    <input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
+                    <input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
+                </div>
             </div>
-        </div>
-        <nav>
-            <ul>
+            <ul class="actions special">
+                <li><a href="#" class="button">Get Started</a></li>
+            </ul>
+        </form>
+        <hr />
+        -->
+        <footer>
+            <ul class="icons">
                 <li>
-                    <a href="https://github.com/GreemDev/Volte" target="_blank">GitHub</a>
+                    <a href="https://github.com/Ultz/Volte" class="icon brands fa-github">GitHub</a>
                 </li>
                 <li>
-                    <a href="https://github.com/GreemDev/Volte/wiki" target="_blank">Docs</a>
-                </li>
-                <li>
-                    <a asp-page="/Discord" target="_blank">Discord</a>
-                </li>
-                <li>
-                    <a asp-page="/Invite" target="_blank">Invite</a>
+                    <a href="https://discord.gg/H8bcFr2" class="icon brands fa-discord">Discord</a>
                 </li>
             </ul>
-        </nav>
-    </header>
+        </footer>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="copyright">
+            <li>&copy; Evan Husted</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </footer>
+
 </div>
 
-<div id="bg"></div>
-
-<script src="volte/assets/js/jquery.min.js"></script>
-<script src="volte/assets/js/browser.min.js"></script>
-<script src="volte/assets/js/breakpoints.min.js"></script>
-<script src="volte/assets/js/util.js"></script>
-<script src="volte/assets/js/main.js"></script>
+<!-- Scripts -->
+<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
 
 </body>
 </html>
